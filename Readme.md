@@ -1,4 +1,4 @@
-# Event-Driven Pipeline:
+# Azure Event hubs Pipeline:
 
 This project demonstrates an end-to-end event-driven architecture using **Azure Event Grid**, **Azure Event Hub**, and **Apache Spark Structured Streaming** in **Azure Databricks**.
 
