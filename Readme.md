@@ -10,7 +10,7 @@ Here is the flow of data:
 
 Following steps were performed:
 
-1. Created an Azure Event Grid Topic
-2. Subscribed the topic to Azure Event Hub
-3. Send sample events to Event Grid
-4. Read and processed these events from Azure event hub in real-time using Spark Streaming inside Azure Databricks
+1. Created an **Azure Event Grid** Topic
+2. Subscribed the topic to **Azure Event Hub**
+3. Send sample events to **Event Grid**
+4. Read and processed these events from **Azure event hub** in real-time using **Spark Streaming** inside **Azure Databricks**
