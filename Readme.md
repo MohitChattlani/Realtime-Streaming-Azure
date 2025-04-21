@@ -4,7 +4,7 @@ This project demonstrates an end-to-end event-driven architecture using **Azure 
 
 Here is the flow of data:
 
-Azure Event Grid -> Event Hub -> Spark Streaming in Databricks
+![Data Pipeline Diagram](images/azure_event_grid_arch.PNG)
 
 ## Overview
 
