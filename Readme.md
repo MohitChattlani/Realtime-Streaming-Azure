@@ -12,6 +12,6 @@ Following steps were performed:
 
 1. Created an **Azure Event Grid** Topic
 2. Subscribed the topic to **Azure Event Hub**
-3. Send sample events to **Event Grid**
+3. Send sample events to **Event Grid** using curl command which were passed on to **Azure Event Hub**
 4. Read and processed these events from **Azure event hub** in real-time using **Spark Streaming** inside **Azure Databricks**
 5. Pushed the events in realtime to **Azure Cosmos DB for MongoDB**
