@@ -1,6 +1,9 @@
 # Databricks notebook source
 
-#First we need to install com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.22 (Maven)
+#First we need to install 
+
+#1. com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.22 (For Eventhub connection)
+#2. org.mongodb.spark:mongo-spark-connector_2.12:10.2.0 (For Mongo DB connection)
 
 connection_string = "Endpoint=sb://<namespace>.servicebus.windows.net/<eventhub_name>;EntityPath=<eventhub-name>;SharedAccessKeyName=<keyname>;SharedAccessKey=<key>"
 
@@ -22,9 +25,11 @@ messages = df.selectExpr("cast(body as string) as message")
 
 query = (
     messages.writeStream
-    .outputMode("append")
-    .format("console")
-    .option("failOnDataLoss", "false")
-    .trigger(processingTime="10 seconds")
+    .format("mongodb")
+    .option("spark.mongodb.connection.uri", "your_cosmos_uri") \
+    .option("spark.mongodb.database", "sample") \
+    .option("spark.mongodb.collection", "events") \
+    .option("checkpointLocation", "/tmp/my-data") \
+    .outputMode("append") \
     .start()
 )
