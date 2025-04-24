@@ -1,7 +1,6 @@
 # Databricks notebook source
 
-#First we need to install 
-
+#First we need to install these libraries by providing below maven coordinates
 #1. com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.22 (For Eventhub connection)
 #2. org.mongodb.spark:mongo-spark-connector_2.12:10.2.0 (For Mongo DB connection)
 
