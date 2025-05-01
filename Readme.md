@@ -16,3 +16,5 @@ Following steps were performed:
    <pre> bash curl -X POST https://TOPICNAME.REGION-1.eventgrid.azure.net/api/events \ -H "aeg-sas-key: YOURKEY" \ -H "Content-Type: application/json" \ -d '[ { "id": "1234", "eventType": "recordInserted", "subject": "/app/user/creation", "eventTime": "2025-04-24T10:00:00Z", "data": { "userId": "abc123", "userName": "johndoe" }, "dataVersion": "1.0" } ]' </pre>
 4. Read and processed these events from **Azure event hub** in real-time using **Spark Streaming** inside **Azure Databricks**
 5. Pushed these events in realtime to **Azure Cosmos DB for MongoDB**
+
+Note: Code for performing steps 4 and 5 is available in the file _azure_real_time_streaming.py_
